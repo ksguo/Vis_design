@@ -10,15 +10,15 @@ function initialiseWebpage() {
     const title = document.createElement("h1");
     title.style.fontFamily = "inherit";
     title.style.textAlign = "center";
-    title.textContent = "Visualisierung WS 21/22";
+    title.textContent = "Visualisierung WS 23/24";
     main.appendChild(title);
 
     const subTitle = document.createElement("h2");
     subTitle.style.fontFamily = "inherit";
     subTitle.style.textAlign = "center";
-    subTitle.textContent = "Übung " + excersiceInfo.excerciseNumber;
+    subTitle.textContent = "DesignÜbung " + excersiceInfo.excerciseNumber;
     main.appendChild(subTitle);
-    document.title = "Vis WS 21/22 Übung " + excersiceInfo.excerciseNumber;
+    document.title = "Vis WS 23/24 DesignÜbung " + excersiceInfo.excerciseNumber;
 
     const canvas = document.createElement("div");
     canvas.id = "canvas";
@@ -127,6 +127,8 @@ function getSankeyGenerator(width, height, nodes, links) {
         .links(links); //add the links
     return sankey; //return the generator for the diagram so we can add it somewhere
 }
+
+
 
 /**
  * Draws the sankey diagram / parallel set, given a set of sankey nodes and sankey links.
