@@ -136,6 +136,8 @@ function getSankeyGenerator(width, height, nodes, links) {
  */
 function drawSankeyDiagram(two, nodes, links, color) {
     const svg = d3.select('svg');
+
+
     // draw all the nodes as rectangles
     svg.append("g")
         .selectAll("rect")
@@ -171,6 +173,8 @@ function drawSankeyDiagram(two, nodes, links, color) {
         .append("tspan") //add a tspan (subtext) within the text element, allows for different styling
         .attr("fill-opacity", 1.0)
         .text(d => ` ${d.value.toLocaleString()}`); //add the count of how many values
+
+
 
 }
 

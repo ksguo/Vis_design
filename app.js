@@ -10,18 +10,18 @@ function classifyData(data) {
     return data.map(d => {
         // 对成绩进行分类
         let gradeCategory;
-        if (d.Grade <= 1) gradeCategory = 'Sehr gut';
-        else if (d.Grade <= 2) gradeCategory = 'Gut';
-        else if (d.Grade <= 3) gradeCategory = 'Befriedigend';
-        else if (d.Grade <= 4) gradeCategory = 'Ausreichend';
-        else gradeCategory = 'Nicht Bestand';
+        if (d.Grade <= 1) gradeCategory = 'Sehr gut:';
+        else if (d.Grade <= 2) gradeCategory = 'Gut:';
+        else if (d.Grade <= 3) gradeCategory = 'Befriedigend:';
+        else if (d.Grade <= 4) gradeCategory = 'Ausreichend:';
+        else gradeCategory = 'Nicht Bestand:';
 
         // 对完成时间进行分类
         let timeCategory;
-        if (d['Time to complete exam'] <= 20) timeCategory = 'weniger als 20min';
-        else if (d['Time to complete exam'] <= 40) timeCategory = '20-40min';
-        else if (d['Time to complete exam'] <= 60) timeCategory = '40-60min';
-        else timeCategory = 'mehr als 60min';
+        if (d['Time to complete exam'] <= 20) timeCategory = 'weniger als 20min:';
+        else if (d['Time to complete exam'] <= 40) timeCategory = '20-40min:';
+        else if (d['Time to complete exam'] <= 60) timeCategory = '40-60min:';
+        else timeCategory = 'mehr als 60min:';
 
         return { ...d, Grade: gradeCategory, 'Time to complete exam': timeCategory };
     });
@@ -38,12 +38,12 @@ function draw(two) {
         const translucentColors = [
             'rgba(130, 180, 220, 0.7)',  // 柔和蓝
             'rgba(255, 230, 150, 0.7)',  // 暖黄
-            'rgba(199, 134, 113, 0.7)',  // 柔和红棕色
+            'rgba(180, 180, 180, 0.7)',  // 中等灰
             'rgba(195, 155, 211, 0.7)',  // 柔和紫色
             'rgba(137, 166, 196, 0.7)',  // 柔和淡蓝
             'rgba(240, 240, 240, 0.7)',  // 浅灰
-            'rgba(210, 170, 110, 0.7)',  // 淡棕
-            'rgba(180, 180, 180, 0.7)',  // 中等灰
+
+
 
         ];
 
